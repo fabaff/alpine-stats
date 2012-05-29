@@ -1,0 +1,25 @@
+Alpine Linux Statistics
+-----------------------
+
+Alpine Linux stats contains scripts to make graphs about the evolution of
+the Alpine Linux Development. So far only the packages per release are
+counted.
+
+Source code
+-----------
+
+git clone git://git.alpinelinux.org/fab/alpine-stats
+
+Output
+------
+
+The output is available on the web:
+
+* http://wiki.alpinelinux.org/wiki/Trivia
+
+Requirements
+------------
+
+* python
+
+Most parts are licensed under GPLv2, for more details check COPYING.
