@@ -1,3 +1,14 @@
+#!/env/python
+# This simple script is setting up a Alpine Linux installation in a chroot.
+# chroot will be placed in the current working directory.
+#
+# This script can be used to do stuff for the Trivia page.
+# http://wiki.alpinelinux.org/wiki/Trivia
+# 
+# Licensed under GPLv2
+# 
+# Copyright (c) 2012 Fabian Affolter <fabian at affolter-engineering.ch>
+
 import os
 import sys
 import urllib2
