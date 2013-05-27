@@ -7,7 +7,7 @@
 # 
 # Licensed under GPLv2
 # 
-# Copyright (c) 2012 Fabian Affolter <fabian at affolter-engineering.ch>
+# Copyright (c) 2012-2013 Fabian Affolter <fabian at affolter-engineering.ch>
 
 import os
 import sys
@@ -58,7 +58,7 @@ def clean():
     os.remove('APKINDEX')
 
 def main(argv):
-    url = 'http://nl.alpinelinux.org/alpine/v%s/packages/main/APKINDEX.tar.gz' % argv
+    url = 'http://nl.alpinelinux.org/alpine/v%s/main/x86_64/APKINDEX.tar.gz' % argv
     #url = 'http://ancient.alpinelinux.org/alpine/v%s/apks/INDEX.md5.gz' % argv
     numbers = grab(url)
 

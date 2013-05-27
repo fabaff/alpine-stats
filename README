@@ -21,5 +21,6 @@ Requirements
 ------------
 
 * python
+* gnuplot
 
 Most parts are licensed under GPLv2, for more details check COPYING.
