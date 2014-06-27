@@ -7,7 +7,7 @@
 # 
 # Licensed under GPLv2
 # 
-# Copyright (c) 2012-2013 Fabian Affolter <fabian at affolter-engineering.ch>
+# Copyright (c) 2012-2014 Fabian Affolter <fabian at affolter-engineering.ch>
 
 import os
 import sys
