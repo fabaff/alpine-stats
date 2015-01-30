@@ -11,7 +11,7 @@ set ytics 100 nomirror
 set mxtics 2
 set mytics 2
 set ytics 500
-set yrange [0:4500]
+set yrange [0:5000]
 set ylabel "Total packages"
 set xlabel "Releases"
 
