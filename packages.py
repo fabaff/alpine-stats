@@ -7,7 +7,7 @@
 # 
 # Licensed under GPLv2
 # 
-# Copyright (c) 2012-2014 Fabian Affolter <fabian at affolter-engineering.ch>
+# Copyright (c) 2012-2017 Fabian Affolter <fabian at affolter-engineering.ch>
 
 import os
 import sys
@@ -35,6 +35,7 @@ def grab(url):
     countDev = 0
     countDoc = 0
     countLib = 0
+    countCom = 0
     total = 0
 
     fobj = open('APKINDEX', 'r')
@@ -49,7 +50,7 @@ def grab(url):
             else:
                 countStd = countStd + 1
     fobj.close()
-    total = countStd + countDev + countDoc + countLib
+    total = countStd + countDev + countDoc + countLib 
     numbers = (countStd, countDev, countDoc, countLib, total)
     return numbers
 
