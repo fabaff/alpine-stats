@@ -1,4 +1,4 @@
-#!/env/python
+#!/usr/bin/env python3
 # This simple script is collecting details about the packages in Alpine Linux.
 #
 # This script can be used to do stuff for the Trivia page.
@@ -10,15 +10,17 @@
 
 import os
 import sys
-import urllib2
 import tarfile
 
+import requests
+
+
 def grab(url):
-    """Create the data."""
-    data = urllib2.urlopen(url)
-    localFile = open('APKINDEX.tar.gz', 'w')
-    localFile.write(data.read())
-    localFile.close()
+    """Collect the data."""
+    response = requests.get(url, timeout=30)
+    with open('APKINDEX.tar.gz', 'wb') as archive:
+        archive.write(response.content)
+    archive.close()
 
     tar = tarfile.open('APKINDEX.tar.gz')
     tar.extract('APKINDEX', path=".")
@@ -54,12 +56,11 @@ def clean():
 
 def main(argv):
     """The main part of the script."""
-    url = 'http://nl.alpinelinux.org/alpine/v%s/main/x86_64/APKINDEX.tar.gz' % argv
-    #url = 'http://ancient.alpinelinux.org/alpine/v%s/apks/INDEX.md5.gz' % argv
+    url = 'http://nl.alpinelinux.org/alpine/v{}/main/x86_64/APKINDEX.tar.gz'.format(argv)
     numbers = grab(url)
 
-    print "| '''%s'''\n| %s\n| %s\n| %s\n| %s\n| %s\n|-" \
-        % (argv, numbers[4], numbers[0], numbers[1], numbers[2], numbers[3])
+    print("| '''{}'''\n| {}\n| {}\n| {}\n| {}\n| {}\n|-".format(
+        argv, numbers[4], numbers[0], numbers[1], numbers[2], numbers[3]))
     
     clean()
 
