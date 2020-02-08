@@ -3,12 +3,12 @@ Alpine Linux Statistics
 
 Alpine Linux stats contains scripts to make graphs about the evolution of
 the Alpine Linux Development. So far only the packages per release are
-counted.
+counted and that's it.
 
 Source code
 -----------
 
-git clone git://git.alpinelinux.org/fab/alpine-stats
+$ git clone git://git.alpinelinux.org/fab/alpine-stats
 
 Output
 ------
